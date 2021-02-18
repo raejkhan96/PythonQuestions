@@ -1,0 +1,15 @@
+
+# example sentence
+sent1 = 'I need to work very hard to learn more about algorithms in Python!'
+
+def avgword(sent1):
+    # replace punctuation with blank space
+    for  p in ',.();?!':
+        sent1 = sent1.replace(p,'')
+    sent1 = sent1.split()
+    # determine avg for words in sentence
+    avg = (sum(len(words) for words in sent1))/(len(sent1))
+    return (round(avg,2))
+   
+avg = avgword(sent1)    
+print('The average number of words in the sentence is ' + str(avg))
