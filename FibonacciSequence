@@ -1,0 +1,25 @@
+# Fibonacci Sequence - 0,1,1,2,3,5,8, etc
+# Given n as an input, print n terms of the sequence
+
+# input
+n = 5
+# first two terms
+n1, n2 = 0,1 
+# counter
+i = 0
+
+def fibseq(n, n1, n2):
+    #Positive integer required
+    if n <= 0:
+        print("Please input positive integer")
+    elif n ==1:
+        print(n1)
+    else: 
+        for i in range(n):
+            print(n1)
+            # fibonacci algorithm 
+            n3 = n1 + n2
+            n1 = n2
+            n2 = n3 
+    
+fibseq(n, n1, n2)
